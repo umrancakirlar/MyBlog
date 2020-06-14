@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="WebApplication2.admin.admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <script src="../ckeditor/ckeditor.js"></script>
+    <title></title>
+    <link href="admin.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+         <div class="kutu">
+            <div class="slider"></div>
+           
+            <div class="govde">
+               <div class="govdesol">
+                  <div class="govdesolbaslik">&nbsp;&nbsp;&nbsp;&nbsp; MENÜ</div>
+                  <div class="govdesolicerik">
+
+                       <div style="height:37px; margin-top:4px;background-color:aliceblue;color:midnightblue;font-weight:bolder;background-repeat:repeat-x;">&nbsp;&nbsp;&nbsp;&nbsp;<a href="kategoriler.aspx">-Kategoriler</a></div>
+                       <div style="height:37px; margin-top:4px;background-color:aliceblue;color:midnightblue;font-weight:bolder;background-repeat:repeat-x;">&nbsp;&nbsp;&nbsp;&nbsp;<a href="makaleekle.aspx">-Makale</a></div>
+                      <div style="height:37px; margin-top:4px;background-color:aliceblue;color:midnightblue;font-weight:bolder;background-repeat:repeat-x;">&nbsp;&nbsp;&nbsp;&nbsp;<a href="iletisim.aspx">-İletişim</a></div>
+                      <div style="height:37px; margin-top:4px;background-color:aliceblue;color:midnightblue;font-weight:bolder;background-repeat:repeat-x;">&nbsp;&nbsp;&nbsp;&nbsp;<a href="default.aspx">-Çıkış</a></div>
+
+                  </div>
+        </div>
+                <div class="govdesag">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+ </div>
+                  
+                </div>
+    </form>
+</body>
+</html>

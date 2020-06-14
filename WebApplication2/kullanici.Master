@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="kullanici.master.cs" Inherits="WebApplication2.kullanici" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>BLOG</title>
+    <link href="kullanici.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .text{ m
+                width: 150px;
+                float:right;
+                height: 25px;
+                border: 1px dotted midnightblue;
+                padding-left:3px;
+
+
+        }
+        .btn{
+            float:right;
+            background-color:: aliceblue;
+            width: 100px;
+            height: 25px;
+            color: midnightblue;
+             border: 1px dotted midnightblue;
+
+        }
+
+
+
+        .auto-style3 {
+            float: right;
+            background-color: : aliceblue;
+            color: midnightblue;
+            border: 1px dotted midnightblue;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="kutu">
+            <div class="slider"></div>
+            <div class="menu">
+                <div style="width: 269px; height: 40px; border-right-style: dotted; border-right-width: 1px; border-right-color: aliceblue; float: left; color: #FFFFFF; font-size: 24px; text-align: center; line-height: 40px;">
+                    BLOG</div>
+                
+              <a href="iletisim.aspx"> <div class="menubuton" style="color: #FFFFFF; font-size: 15px; background-color: #000066; text-align: center; float: right">İLETİŞİM</div></a>
+            </div>
+            <div style="height:25px; width:100%; float:left;">
+                <div style="height:25px; width:300px; float:right;">
+                    <asp:Button ID="btn_ara" runat="server" BackColor="#000066" CssClass="auto-style3" ForeColor="White" Text="Ara" Width="60px" OnClick="btn_ara_Click" Height="32px" />
+                    <asp:TextBox ID="txt_ara" runat="server" placeHolder="Aranacak kelime" BackColor="White" CssClass="text" Font-Size="Medium" ForeColor="Black" Width="200px" Height="30px"></asp:TextBox>
+                    
+                </div>
+            </div>
+            <div class="govde">
+               <div class="govdesag">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server"></asp:ContentPlaceHolder>
+ </div>
+               <div class="govdesol">
+                  <div class="govdesolbaslik">Kategoriler</div>
+                  <div class="govdesolicerik">
+                      <asp:DataList ID="dl_kategori" runat="server" OnSelectedIndexChanged="dl_kategori_SelectedIndexChanged" Width="100%">
+                          <ItemTemplate>
+                              <table class="auto-style1">
+                                  <tr>
+                                      <td>&nbsp;</td>
+                                      <td style="width: 230px">
+                                          <asp:Image ID="Image1" runat="server" Height="30px" ImageUrl='<%# Eval("kategoriResim") %>' Width="30px" />
+                                          <a href="katdetay.aspx?kategoriID=<%# Eval("kategoriID") %>"><asp:Literal ID="Literal1" runat="server" Text='<%# Eval("kategoriAd") %>'></asp:Literal></a>
+                                          &nbsp;</td>
+                                  </tr>
+                              </table>
+                          </ItemTemplate>
+                      </asp:DataList>
+                   </div>
+       <div style="height:30px; float:left;width:270px;"></div>
+           
+        <div class="alt"></div>
+            
+        </div>
+                
+           
+    </form>
+</body>
+</html>
